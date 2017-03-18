@@ -1,0 +1,16 @@
+.slideout-form {
+	position:fixed;
+	right:20px;
+	bottom:0;
+	display:none;
+}
+/* Center on mobile devices */
+ @media only screen and (max-width : 480px) {
+  div.slideout-form {
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+  }
+}
