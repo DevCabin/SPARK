@@ -548,10 +548,7 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
-	margin:0 2em;
 }
-
-
 
 .main-navigation a {
 	display: block;
@@ -559,16 +556,13 @@ a:active {
 }
 
 
-
 .main-navigation ul li {
 
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 1.5em;
 	left: -999em;
 	z-index: 99999;
 }
@@ -579,11 +573,11 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 175px;
 }
 
 .main-navigation ul ul li {
-
+	width: 200px;
 }
 
 .main-navigation li:hover > a,
@@ -651,6 +645,10 @@ a:active {
 	width: 50%;
 }
 
+p.site-title {
+	padding: 20px 0 0 0;
+}
+
 /* 
 ======================
 PURE CSS DROPDOWN 
@@ -659,8 +657,7 @@ credit: https://codepen.io/darklit/pen/yMpOEM
 */
 
 nav {
-  margin: 50px 0;
-  background-color: #E64A19;
+
 }
 
 nav ul {
@@ -672,13 +669,11 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  background-color: #E64A19;
 }
 
 nav a {
   display: block;
   padding: 0 10px;
-  color: #FFF;
   font-size: 20px;
   line-height: 60px;
   text-decoration: none;
@@ -686,6 +681,7 @@ nav a {
 
 nav a:hover {
   background-color: #000000;
+  color: #FFF;
 }
 
 
@@ -698,7 +694,6 @@ nav ul ul {
   /* the height of the main nav */
 }
 
-
 /* Display Dropdowns on Hover */
 
 nav ul li:hover > ul {
@@ -709,7 +704,7 @@ nav ul li:hover > ul {
 /* First Tier Dropdown */
 
 nav ul ul li {
-  width: 170px;
+  width: 200px;
   float: none;
   display: list-item;
   position: relative;
@@ -720,12 +715,10 @@ nav ul ul li {
 
 nav ul ul ul li {
   position: relative;
-  top: -60px;
-  left: 170px;
 }
 
 
-/* Change this in order to change the Dropdown symbol */
+/* Change this in order to change the Dropdown symbol 
 
 li > a:after {
   content: ' +';
@@ -734,8 +727,10 @@ li > a:after {
 li > a:only-child:after {
   content: '';
 }
-
-
+*/
+.sub-menu {
+	background: #fff;
+}
 
 /*--------------------------------------------------------------
 # Accessibility

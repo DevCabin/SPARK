@@ -20,7 +20,7 @@
 <link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/inc/EndPageSlideOutBox/css/style.css' type='text/css' media='all' />
 <link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/inc/animatedModal/demo/css/animate.min.css' type='text/css' media='all' />
 
-<link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/style.css?ver=55' type='text/css' media='all' />
+<link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/style.css?ver=1112333' type='text/css' media='all' />
 
 <?php wp_head(); ?>
 </head>
