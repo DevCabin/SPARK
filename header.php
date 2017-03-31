@@ -19,9 +19,36 @@
 <link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/inc/slideoutLead/css/slideout-form.css' type='text/css' media='all' />
 <link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/inc/EndPageSlideOutBox/css/style.css' type='text/css' media='all' />
 <link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/inc/animatedModal/demo/css/animate.min.css' type='text/css' media='all' />
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+<link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/style.css?ver=123' type='text/css' media='all' />
+<style>
 
-<link rel='stylesheet' id='growthspark-style-css'  href='http://spark.growthhit.com/wp-content/themes/growthspark/style.css?ver=55' type='text/css' media='all' />
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------
+font-family: 'Oswald', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Montserrat', sans-serif;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+</style>
 <?php wp_head(); ?>
 </head>
 

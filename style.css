@@ -24,8 +24,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
-# Typography
-# Elements
 # Forms
 # Navigation
 	## Links
@@ -257,162 +255,6 @@ th {
 	padding: 0;
 }
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------
-body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------
-html {
-	box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after { 
-	box-sizing: inherit;
-}
-
-body {
-	background: #fff; 
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-}
-
-blockquote,
-q {
-	quotes: "" "";
-}
-
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
-
-ul,
-ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 1.5em 1.5em;
-}
-
-img {
-	height: auto; 
-	max-width: 100%; 
-}
-
-figure {
-	margin: 1em 0; 
-}
-
-table {
-	margin: 0 0 1.5em;
-	width: 100%;
-}
 
 /*--------------------------------------------------------------
 # Forms
@@ -548,10 +390,7 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
-	margin:0 2em;
 }
-
-
 
 .main-navigation a {
 	display: block;
@@ -559,16 +398,13 @@ a:active {
 }
 
 
-
 .main-navigation ul li {
 
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 1.5em;
 	left: -999em;
 	z-index: 99999;
 }
@@ -579,11 +415,11 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 175px;
 }
 
 .main-navigation ul ul li {
-
+	width: 200px;
 }
 
 .main-navigation li:hover > a,
@@ -651,16 +487,19 @@ a:active {
 	width: 50%;
 }
 
+p.site-title {
+	padding: 20px 0 0 0;
+}
+
+
 /* 
 ======================
 PURE CSS DROPDOWN 
 credit: https://codepen.io/darklit/pen/yMpOEM
 =======================
 */
-
 nav {
-  margin: 50px 0;
-  background-color: #E64A19;
+
 }
 
 nav ul {
@@ -672,20 +511,18 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  background-color: #E64A19;
 }
 
 nav a {
   display: block;
   padding: 0 10px;
-  color: #FFF;
-  font-size: 20px;
   line-height: 60px;
   text-decoration: none;
 }
 
 nav a:hover {
   background-color: #000000;
+  color: #FFF;
 }
 
 
@@ -698,7 +535,6 @@ nav ul ul {
   /* the height of the main nav */
 }
 
-
 /* Display Dropdowns on Hover */
 
 nav ul li:hover > ul {
@@ -709,7 +545,7 @@ nav ul li:hover > ul {
 /* First Tier Dropdown */
 
 nav ul ul li {
-  width: 170px;
+  width: 200px;
   float: none;
   display: list-item;
   position: relative;
@@ -720,12 +556,10 @@ nav ul ul li {
 
 nav ul ul ul li {
   position: relative;
-  top: -60px;
-  left: 170px;
 }
 
 
-/* Change this in order to change the Dropdown symbol */
+/* Change this in order to change the Dropdown symbol 
 
 li > a:after {
   content: ' +';
@@ -734,8 +568,38 @@ li > a:after {
 li > a:only-child:after {
   content: '';
 }
+*/
+.sub-menu {
+	background: #fff;
+}
 
-
+@media (max-width:769px) {
+	.main-navigation li,  {
+		float: left;
+		width: 100%;
+		height:22px;
+	}
+	.main-navigation ul ul, .main-navigation ul ul ul {
+	    display: block;
+	    float: left;
+	    position: relative;
+	    left: 0;
+	    z-index: 99999;
+	}	
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		left: 0;
+	}
+	.main-navigation ul li, .main-navigation ul ul li, .main-navigation ul ul ul li {
+	  width: 100%;
+	  float: left;
+	  display: block;
+	  position: relative;
+	}
+	nav ul ul, nav ul ul ul {
+		top:0px;
+	}
+}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1118,7 +982,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   color: #222; }
 
 
