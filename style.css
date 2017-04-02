@@ -257,109 +257,8 @@ th {
 
 
 /*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 3px;
-}
-
-select {
-	border: 1px solid #ccc;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	color: #111;
-}
-
-textarea {
-	width: 100%;
-}
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
-}
 
 a:focus {
 	outline: thin dotted;
@@ -487,14 +386,13 @@ a:active {
 	width: 50%;
 }
 
-p.site-title {
-	padding: 20px 0 0 0;
+
+.site-title  {
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    text-decoration: none;
 }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 /* 
 ======================
 PURE CSS DROPDOWN 
@@ -519,17 +417,9 @@ nav ul li {
 nav a {
   display: block;
   padding: 0 10px;
-<<<<<<< HEAD
-=======
   font-size: 20px;
->>>>>>> origin/master
   line-height: 60px;
   text-decoration: none;
-}
-
-nav a:hover {
-  background-color: #000000;
-  color: #FFF;
 }
 
 
@@ -576,10 +466,7 @@ li > a:only-child:after {
   content: '';
 }
 */
-.sub-menu {
-	background: #fff;
-}
-<<<<<<< HEAD
+
 
 @media (max-width:769px) {
 	.main-navigation li,  {
@@ -608,8 +495,6 @@ li > a:only-child:after {
 		top:0px;
 	}
 }
-=======
->>>>>>> origin/master
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -993,42 +878,15 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: sans-serif;
-  color: #222; }
+  }
 
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 300; }
-h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
-
-/* Larger than phablet 
-@media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.5rem; }
-}
 */
 p {
   margin-top: 0; }
 
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: #1EAEDB; }
-a:hover {
-  color: #0FA0CE; }
 
 
 /* Buttons
@@ -1041,7 +899,6 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -1052,7 +909,6 @@ input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
@@ -1259,6 +1115,98 @@ hr {
   display: table;
   clear: both; }
 
+
+
+
+#masthead {
+	position: fixed;
+	top:0;
+	width:100%;
+	z-index: 1;
+}
+#content {
+	margin-top: 100px;
+}
+
+/*
+Bottom Right Slide Out
+*/
+#slidebox{
+    width:400px;
+    height:130px;
+    padding:10px;
+    background-color:#fff;
+    border-top:3px solid #E28409;   
+    position:fixed;
+    z-index: 1;
+    bottom:0px;
+    right:-430px;
+	-moz-box-shadow:-2px 0px 5px #aaa;
+	-webkit-box-shadow:-2px 0px 5px #aaa;
+	box-shadow:-2px 0px 5px #aaa;
+}
+#slidebox p, a.more{
+    font-size:11px;
+    text-transform:uppercase;
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing:1px;
+    color:#555;
+}
+a.more{
+    cursor:pointer;
+    color:#E28409;
+}
+a.more:hover{
+    text-decoration:underline;
+}
+#slidebox h2{
+    font-size:18px;
+    margin:10px 20px 10px 0px;
+}
+
+a.close{
+    color:#E28409; 
+    width:13px;
+    height:13px;
+    position:absolute;
+    cursor:pointer;
+    top:10px;
+    right:10px;
+}
+a.close:hover{
+    background-position:0px -13px;
+}
+
+/*
+full screen pop over
+*/
+#callModal {
+	display: none;
+}
+.closebt {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#animatedModal .modal-content {
+	text-align:center;
+	color: #fff;
+}
+#animatedModal .modal-content  h3 {
+	font-size: 3.2em;
+}
+#animatedModal .modal-content  p {
+	font-size: 2.2em;
+}
+
+#animatedModal input {
+	border-color: #fff;
+	color: #fff;
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
