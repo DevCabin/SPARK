@@ -14,7 +14,7 @@
 
 get_header(); ?>
 <div class="container">
-	<div id="primary" class="content-area eight columns">
+	<div id="primary" class="content-area twelve columns">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -36,7 +36,8 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				//get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'search' );
 
 			endwhile;
 
@@ -52,6 +53,6 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 </div><!-- container -->
 <?php get_footer();

@@ -6,6 +6,13 @@
  *
  * @package Growth_Spark
  */
+if ( has_post_thumbnail() ) {
+    $thumb_id = get_post_thumbnail_id();
+    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'page-headers', true);
+    $thumb_url = $thumb_url_array[0];
+    $img_path = $thumb_url;
+}
+
 
 ?>
 
@@ -27,6 +34,15 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+
+
+	<?php if ($img_path != "") { ?>
+	 <img src="<?php echo $img_path; ?>" alt="Featured image - <?php the_title();?>">
+	<br><br>
+	<?php } ?>
+
+
+
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */

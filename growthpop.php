@@ -27,28 +27,19 @@ if ($pu_active == "on") {
             </div>
                 
             <div class="modal-content">
-                <!--Your modal content goes here-->
-                <h3>Do you want more success?</h2>
-                <p class="m1">Hey there, We're GrowthHit. <br>
-                We're determined to make YOU successful. <br>
-                Why wait another second?</p>
+
+            <?php if ($pu_settings == "pu_simple") { ?>
+            <h1><?php echo $pop_up_title; ?></h1>
+            <p class="sub-t"><?php echo $pu_desc; ?></p>
+            <div id="pu-form">
+              <?php echo $form_code; ?>
+            </div>
+            
+            <?php } else { echo $full; } ?>
 
                 
                 
-                <div id="m-form">
 
-                    <form id="" class="" action="/" method="post">
-
-                        <div>
-
-                            <input class="" type="text" name="" placeholder="EMAIL" value="" autofocus required>
-                            <input class="submit" type="submit" id="step1" value="Analyze">
-
-                        </div>
-
-                    </form>
-
-                </div>
 
             </div>
         </div>

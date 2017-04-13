@@ -15,6 +15,54 @@
 	</div><!-- #content -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- footer Start 
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="twelve columns">
+            <div class="footer-manu">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Terms</a></li>
+              </ul>
+            </div>
+            <p>Copyright &copy; 2017 - 2028<a href="#">GrowthHit. Taking over the mother flippin world.</a>.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- BOTTOM RIGHT SLIDE OUT -->
         <div id="slidebox">
             <a class="close">
@@ -45,7 +93,7 @@ $("#callModal").animatedModal({
 
     //animatedIn:'lightSpeedIn',
     animatedOut:'bounceOutDown',
-    color:'#71b753',
+    color:'#27AE60',
     // Callbacks
     beforeOpen: function() {
         console.log("Popover animation was called");
@@ -90,11 +138,64 @@ $(function() {
         console.log("Bottom Right Slidebox Closed");
 	});
 });
+
+
 </script>
 
 
 
 <?php wp_footer(); ?>
+
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    // Slick Carousel
+    $('.proof').slick({
+      centerMode: true,
+      centerPadding: '0px',
+      arrows: false,
+      slidesToShow: 3,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+
+  var $hamburger = $(".hamburger");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    // Do something else, like open/close menu
+  });
+
+//$('#social-proof ').slideDown(1500);
+/*
+setTimeout(function(){ 
+    $('#social-proof').show();
+}, 1500);
+*/
+});
+</script>
 
 </body>
 </html>
