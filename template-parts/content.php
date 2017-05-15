@@ -4,8 +4,9 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Growth_Spark
+ * @package GrowthSpark
  */
+$img_path = "#";
 if ( has_post_thumbnail() ) {
     $thumb_id = get_post_thumbnail_id();
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'page-headers', true);
@@ -36,8 +37,8 @@ if ( has_post_thumbnail() ) {
 	<div class="entry-content">
 
 
-	<?php if ($img_path != "") { ?>
-	 <img src="<?php echo $img_path; ?>" alt="Featured image - <?php the_title();?>">
+	<?php if ($img_path != "#") { ?>
+	 <img src="<?php echo $img_path; ?>" alt="Featured image - <?php echo strip_tags( get_the_title() );?>">
 	<br><br>
 	<?php } ?>
 

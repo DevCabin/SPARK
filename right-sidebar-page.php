@@ -3,38 +3,24 @@
  * Template Name: Right Sidebar
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- * @package Growth Spark
+ * @package GrowthSpark
  */
 
 get_header(); 
 while ( have_posts() ) : the_post();
 
-$default_img_path = get_template_directory_uri() . "/inc/img/about-bg.jpg";
-$img_path = $default_img_path;
-
-if ( has_post_thumbnail() ) {
-    $thumb_id = get_post_thumbnail_id();
-    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'page-headers', true);
-    $thumb_url = $thumb_url_array[0];
-
-    $img_path = $thumb_url;
-
-}
 
 ?>
 
 
     <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('<?php echo $img_path; ?>')">
+    <header class="intro-header">
 
         <div class="container">
             <div class="row">
                 <div class=" twelve columns">
                     <div class="page-heading">
                         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                   
-                        <!--span class="subheading">This is what I do.</span-->
                     </div>
                 </div>
             </div>

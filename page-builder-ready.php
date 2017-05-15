@@ -2,7 +2,7 @@
 /**
  * Template Name: Page Builder Ready (PBR)
  *
- * @package Growth Spark
+ * @package GrowthSpark
  */
 
 get_header(); 

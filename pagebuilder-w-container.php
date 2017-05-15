@@ -2,7 +2,7 @@
 /**
  * Template Name: PBR With Container
  *
- * @package Growth Spark
+ * @package GrowthSpark
  */
 
 get_header(); 

@@ -1,10 +1,10 @@
 <?php
 /**
- * Custom functions that act independently of the theme templates
+ * Custom functions that act independently of the theme templates.
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Growth_Spark
+ * @package GrowthSpark
  */
 
 /**
@@ -19,21 +19,6 @@ function growthspark_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'growthspark_body_classes' );
-
-/**
- * Add a pingback url auto-discovery header for singularly identifiable articles.
- */
-function growthspark_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
-	}
-}
-add_action( 'wp_head', 'growthspark_pingback_header' );

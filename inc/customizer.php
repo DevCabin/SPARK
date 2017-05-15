@@ -1,8 +1,8 @@
 <?php
 /**
- * Growth Spark Theme Customizer
+ * GrowthSpark Theme Customizer.
  *
- * @package Growth_Spark
+ * @package GrowthSpark
  */
 
 /**
@@ -21,6 +21,6 @@ add_action( 'customize_register', 'growthspark_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function growthspark_customize_preview_js() {
-	wp_enqueue_script( 'growthspark_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'growthspark_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'growthspark_customize_preview_js' );

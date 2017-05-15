@@ -4,9 +4,9 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Growth_Spark
+ * @package GrowthSpark
  */
-
+$img_path = "#";
 if ( has_post_thumbnail() ) {
     $thumb_id = get_post_thumbnail_id();
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'page-headers', true);
@@ -18,7 +18,7 @@ if ( has_post_thumbnail() ) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ($img_path != "") { ?>
+	<?php if ($img_path != "#") { ?>
 	<a href="<?php the_permalink();?>">
 	 <div class="intro-header" style="background-image: url('<?php echo $img_path; ?>');width: 100%;height: 175px;background-size: cover;">
 
