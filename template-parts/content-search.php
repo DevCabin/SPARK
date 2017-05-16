@@ -20,7 +20,7 @@ if ( has_post_thumbnail() ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ($img_path != "#") { ?>
 	<a href="<?php the_permalink();?>">
-	 <div class="intro-header" style="background-image: url('<?php echo $img_path; ?>');width: 100%;height: 175px;background-size: cover;">
+	 <div class="intro-header" style="background-image: url('<?php echo $img_path; ?>');width: 100%;height: 200px;background-size: cover;">
 
 	 </div>
 	</a>

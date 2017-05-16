@@ -4,7 +4,7 @@ Theme URI: https://spark.growthhit.com/
 Author: GrowthHit
 Author URI: https://growthhit.com
 Description: A fast mobile Responsive WordPress theme built for speed and optimized for conversions with calls to action or CTA.
-Version: 2.0.3
+Version: 2.0.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: growthspark
@@ -1915,7 +1915,7 @@ font header .navbar-default .navbar-nav li a:hover {
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .2)
+    background-color: rgba(0, 0, 0, .35)
 }
 
 #slider .block {
@@ -2621,7 +2621,6 @@ footer .footer-menu ul li a:hover {
 
 #footer-widget-area {
     background: #313138;
-    margin-top: 48px;
     color: #fff;
 }
 
@@ -2703,7 +2702,7 @@ footer .footer-menu ul li a:hover {
 
 @media (min-width:769px) {
     .blog article {
-        width: 41%;
+        width: 48%;
         margin: 1%;
         float: left;
         border-radius: 3px;
@@ -2711,13 +2710,19 @@ footer .footer-menu ul li a:hover {
         box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
         background: #fff;
         position: relative;
-        padding: 20px
+        padding: 20px;
+	min-height: 555px;
     }
 }
 
 @media (max-width:1100px) {
     #slider .block h1 {
         padding-bottom: 20px
+    }
+}
+@media (min-width:769px) and (max-width:1100px) {
+    .blog article {
+	min-height: 595px;
     }
 }
 

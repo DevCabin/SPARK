@@ -177,7 +177,7 @@ function growthspark_create_options() {
 		'default' => false,
 	) );
 	$section->createOption( array(	
-		'name' => __( 'Tesimonial', 'growthspark' ),
+		'name' => __( 'Testimonial', 'growthspark' ),
 		'id' => 'testimonial',
 		'type' => 'textarea',
 		'desc' => 'Enter your testimonial here. Accepts basic HTML if you want more than just a line of text. <hr>'
