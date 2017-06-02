@@ -125,7 +125,7 @@ function growthspark_create_options() {
 		'id' => 'activate_clients',
 		'type' => 'checkbox',
 		'desc' => 'Check this box to activate this section',
-		'default' => true,
+		'default' => false,
 	) );
 	$section->createOption( array(
 		'name' => __( 'Client Logo One', 'growthspark' ),
@@ -157,14 +157,14 @@ function growthspark_create_options() {
 		'id' => 'content_active',
 		'type' => 'checkbox',
 		'desc' => 'The content is controlled under "Pages" and will be the one labelled "Front Page".',
-		'default' => true,
+		'default' => false,
 	) );
 	$section->createOption( array(
 		'name' => __( 'Give this section a "container"? You may need one if not using a page builder', 'growthspark' ),
 		'id' => 'content_active_container',
 		'type' => 'checkbox',
 		'desc' => 'Check box to put content in a container. <hr>',
-		'default' => true,
+		'default' => false,
 	) );
 
 
@@ -174,7 +174,7 @@ function growthspark_create_options() {
 		'id' => 'activate_testimonial',
 		'type' => 'checkbox',
 		'desc' => 'Check this box to activate this section',
-		'default' => true,
+		'default' => false,
 	) );
 	$section->createOption( array(	
 		'name' => __( 'Tesimonial', 'growthspark' ),
@@ -190,7 +190,7 @@ function growthspark_create_options() {
 		'id' => 'activate_about_us',
 		'type' => 'checkbox',
 		'desc' => 'Check this box to activate this section',
-		'default' => true,
+		'default' => false,
 	) );
 	$section->createOption( array(	
 		'name' => __( 'About Us Section Title', 'growthspark' ),
@@ -227,7 +227,7 @@ function growthspark_create_options() {
 		'id' => 'activate_cta_2',
 		'type' => 'checkbox',
 		'desc' => 'Check this box to activate a second CTA.',
-		'default' => true,
+		'default' => false,
 	) );
 	$section->createOption( array(
 		'name' => 'Background color for the secondary call to action section',
