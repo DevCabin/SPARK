@@ -332,9 +332,16 @@ function growthspark_create_options() {
 	    'name' => __( 'Custom Javascript Code', 'growthspark' ),
 	    'id' => 'custom_js',
 	    'type' => 'code',
-	    'desc' => __( 'If you want to add some additional Javascript code (analytics for example) into your site, add them here and it will be included in the front end (bottom of page). No need to add <code>script</code> tags', 'growthspark' ),
+	    'desc' => __( 'If you want to add some additional Javascript code (analytics for example) into your site, add them here and it will be included in the front end (bottom of page). Note: do NOT add <code>script</code> tags', 'growthspark' ),
 	    'lang' => 'javascript',
 	) );
+	$generalTab->createOption( array(
+	    'name' => __( 'Head Code', 'growthspark' ),
+	    'id' => 'custom_head_code',
+	    'type' => 'code',
+	    'desc' => __( 'If you need additional code in the HTML "head" of your site , add it here. This is good for Facebook Pixel code for example. Note: You MUST add <code>script</code> tags or any other html here', 'growthspark' ),
+	    'lang' => 'javascript',
+	) );	
 	$generalTab->createOption( array(
 	    'type' => 'save',
 	) );

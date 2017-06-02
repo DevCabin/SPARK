@@ -6,7 +6,7 @@ $main_nav_left_or_right = $titan->getOption( 'main_nav_left_or_right' );
 
 $sb_style = $titan->getOption( 'sb_style' );
 
-
+$head_code = $titan->getOption( 'custom_head_code' );
 
 $imageIDl = $titan->getOption( 'site_logo' );
 
@@ -244,3 +244,8 @@ Sidebar and Comment area options
 
 </style>
 
+<?php if( $head_code ) : ?>
+<!-- Head code from theme options -->
+<?php echo $head_code ; ?> 
+<!-- END Head code from theme options -->
+<?php endif; ?>
