@@ -2699,7 +2699,9 @@ footer .footer-menu ul li a:hover {
 .site-info {
     font-size: .75em
 }
-
+.single .entry-content p, .single .entry-content li {
+	font-size: 1.25em;
+}
 @media (min-width:769px) {
     .blog article {
         width: 48%;
@@ -2711,7 +2713,7 @@ footer .footer-menu ul li a:hover {
         background: #fff;
         position: relative;
         padding: 20px;
-	min-height: 555px;
+		min-height: 575px;
     }
 }
 
@@ -2720,9 +2722,13 @@ footer .footer-menu ul li a:hover {
         padding-bottom: 20px
     }
 }
-@media (min-width:769px) and (max-width:1100px) {
-    .blog article {
-	min-height: 595px;
+@media (min-width:769px) and (max-width:1300px) {
+    .blog .entry-summary p {
+		max-height: 100px;
+		overflow: hidden;
+    }
+    .entry-header h2 {
+    	font-size:1.25em;
     }
 }
 

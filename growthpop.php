@@ -82,9 +82,9 @@ if ($pu_active == true) {
 
   } //windowWidth > 768
 
-})(jQuery);
 
 
+/*
   function trackShowPu(event) {
     console.log('Pop Up Shown after <?php echo $pu_timeout;?> seconds');
   }
@@ -130,7 +130,14 @@ if (typeof(ga) !== "undefined") {
     trackClicksPu();
     // track any clicks within the form area of the pop up
   })
+
 };
+
+  */
+
+
+})(jQuery);
+
 
 // FULL PAGE POP OVER
 (function($){ 
@@ -147,11 +154,11 @@ if (typeof(ga) !== "undefined") {
       },           
       afterOpen: function() {
           //console.log("Popover animation is completed");
-          trackShowPu();
+          //trackShowPu();
       }, 
       beforeClose: function() {
           //console.log("Popover Close was called");
-          trackClosePu();
+          //trackClosePu();
           // track when the pop up is closed
       }, 
       afterClose: function() {
@@ -210,7 +217,7 @@ a.close {
   // BOTTOM RIGHT SLIDE OUT
 (function($){
   $(function() {
-
+/*
       function trackClicksSo(event) {
         console.log('Slide Out Link Clicked');
       }
@@ -218,7 +225,7 @@ a.close {
       function trackCloseSo(event) {
         console.log('Slide Out Closed');
       }
-
+*/
   });
   $(document).ready(function() {
 
