@@ -45,6 +45,150 @@ if ($pu_active == true) {
         </div>
 
 <script>
+/*=========================================
+ * animatedModal.js: Version 1.0
+ * author: João Pereira
+ * website: http://www.joaopereira.pt
+ * email: joaopereirawd@gmail.com
+ * Licensed MIT 
+=========================================*/
+
+(function ($) {
+ 
+    $.fn.animatedModal = function(options) {
+        var modal = $(this);
+        
+        //Defaults
+        var settings = $.extend({
+            modalTarget:'animatedModal', 
+            position:'fixed', 
+            width:'100%', 
+            height:'100%', 
+            top:'0px', 
+            left:'0px', 
+            zIndexIn: '9999',  
+            zIndexOut: '-9999',  
+            color: '#39BEB9', 
+            opacityIn:'1',  
+            opacityOut:'0', 
+            animatedIn:'zoomIn',
+            animatedOut:'zoomOut',
+            animationDuration:'.6s', 
+            overflow:'auto', 
+            // Callbacks
+            beforeOpen: function() {},           
+            afterOpen: function() {}, 
+            beforeClose: function() {}, 
+            afterClose: function() {}
+ 
+            
+
+        }, options);
+        
+        var closeBt = $('.close-'+settings.modalTarget);
+
+        //console.log(closeBt)
+
+        var href = $(modal).attr('href'),
+            id = $('body').find('#'+settings.modalTarget),
+            idConc = '#'+id.attr('id');
+            //console.log(idConc);
+            // Default Classes
+            id.addClass('animated');
+            id.addClass(settings.modalTarget+'-off');
+
+        //Init styles
+        var initStyles = {
+            'position':settings.position,
+            'width':settings.width,
+            'height':settings.height,
+            'top':settings.top,
+            'left':settings.left,
+            'background-color':settings.color,
+            'overflow-y':settings.overflow,
+            'z-index':settings.zIndexOut,
+            'opacity':settings.opacityOut,
+            '-webkit-animation-duration':settings.animationDuration,
+            '-moz-animation-duration':settings.animationDuration,
+            '-ms-animation-duration':settings.animationDuration,
+            'animation-duration':settings.animationDuration
+        };
+        //Apply stles
+        id.css(initStyles);
+
+        modal.click(function(event) {       
+            event.preventDefault();
+            $('body, html').css({'overflow':'hidden'});
+            if (href == idConc) {
+                if (id.hasClass(settings.modalTarget+'-off')) {
+                    id.removeClass(settings.animatedOut);
+                    id.removeClass(settings.modalTarget+'-off');
+                    id.addClass(settings.modalTarget+'-on');
+                } 
+
+                 if (id.hasClass(settings.modalTarget+'-on')) {
+                    settings.beforeOpen();
+                    id.css({'opacity':settings.opacityIn,'z-index':settings.zIndexIn});
+                    id.addClass(settings.animatedIn);  
+                    id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterOpen);
+                };  
+            } 
+        });
+
+
+
+        closeBt.click(function(event) {
+            event.preventDefault();
+            $('body, html').css({'overflow':'auto'});
+
+            settings.beforeClose(); //beforeClose
+            if (id.hasClass(settings.modalTarget+'-on')) {
+                id.removeClass(settings.modalTarget+'-on');
+                id.addClass(settings.modalTarget+'-off');
+            } 
+
+            if (id.hasClass(settings.modalTarget+'-off')) {
+                id.removeClass(settings.animatedIn);
+                id.addClass(settings.animatedOut);
+                id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
+            };
+
+        });
+
+        function afterClose () {       
+            id.css({'z-index':settings.zIndexOut});
+            settings.afterClose(); //afterClose
+        }
+
+        function afterOpen () {       
+            settings.afterOpen(); //afterOpen
+        }
+
+    }; // End animatedModal.js
+
+}(jQuery));
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (function($){ 
 
   var windowWidth = $(window).width();
@@ -76,21 +220,21 @@ if ($pu_active == true) {
      }, <?php echo $pu_timeout;?>e3);
 
         //localStorage.setItem('popState','testMode');
-        localStorage.setItem('popState','shown');
+        localStorage.setItem('popState','shown'); T
         
     }
 
   } //windowWidth > 768
 
+//})(jQuery);
 
 
-/*
   function trackShowPu(event) {
     console.log('Pop Up Shown after <?php echo $pu_timeout;?> seconds');
   }
 
   function trackClicksPu(event) {
-    console.log('Pop Up Link Clicked - <?php echo $pu_timeout;?> seconds');
+    console.log('Shown after <?php echo $pu_timeout;?> seconds -  Pop Up Link Clicked');
   }
 
   function trackClosePu(event) {
@@ -116,6 +260,14 @@ if (typeof(ga) !== "undefined") {
     });
     console.log('Pop Up Link Clicked');
   }
+  function trackSubmitPu(event) {
+    ga('send', 'event', {
+      eventCategory: 'Growth Spark Pop Up',
+      eventAction: 'click',
+      eventLabel: 'Visitor Submitted the Pop Up Form'
+    });
+    //console.log('Pop Up Form Submitted');
+  }
 
   function trackClosePu(event) {
     ga('send', 'event', {
@@ -130,17 +282,19 @@ if (typeof(ga) !== "undefined") {
     trackClicksPu();
     // track any clicks within the form area of the pop up
   })
+  $('#pu-form form').submit(function() {
+    trackSubmitPu();
+    // track any clicks within the form area of the pop up
+    console.log('Pop Up Form Submitted');
+  })
 
 };
 
-  */
-
-
-})(jQuery);
+//})(jQuery);
 
 
 // FULL PAGE POP OVER
-(function($){ 
+//(function($){ 
   $("#callModal").animatedModal({
 
     //animatedIn:'lightSpeedIn',
@@ -154,11 +308,11 @@ if (typeof(ga) !== "undefined") {
       },           
       afterOpen: function() {
           //console.log("Popover animation is completed");
-          //trackShowPu();
+          trackShowPu();
       }, 
       beforeClose: function() {
           //console.log("Popover Close was called");
-          //trackClosePu();
+          trackClosePu();
           // track when the pop up is closed
       }, 
       afterClose: function() {
@@ -174,10 +328,8 @@ if (typeof(ga) !== "undefined") {
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // begin bottom right slide out
-?>
 
-<?php
-if ( $activate_slide_out == true ) { 
+if ( $activate_slide_out == true ) {
 
   if (is_single()) { ?>
 
@@ -217,7 +369,7 @@ a.close {
   // BOTTOM RIGHT SLIDE OUT
 (function($){
   $(function() {
-/*
+
       function trackClicksSo(event) {
         console.log('Slide Out Link Clicked');
       }
@@ -225,7 +377,7 @@ a.close {
       function trackCloseSo(event) {
         console.log('Slide Out Closed');
       }
-*/
+
   });
   $(document).ready(function() {
 

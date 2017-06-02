@@ -8,6 +8,8 @@
  *
  * @package GrowthSpark
  */
+
+if ( class_exists( 'TitanFramework' ) ) { 
 $titan = TitanFramework::getInstance( 'growthspark' );
 
 $activate_cta_3 = $titan->getOption( 'activate_cta_3' );
@@ -21,9 +23,9 @@ $cta_2_color = $titan->getOption( 'secondary_cta_background_color' );
 $footer_code = $titan->getOption( 'copyright' );
 
 ?>
-		<?php if(!is_front_page()) { ?>
+
 		</div><!-- container -->
-		<?php } ?>
+
 	</div><!-- #content -->
 
 
@@ -158,9 +160,76 @@ if ($activate_cta_3  == true) { ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
 
 <?php include('growthpop.php'); ?>
 
+<?php } else { 
+// end Titan option check. It's a lonely without it. 
+?>
+
+
+    </div><!-- container -->
+
+  </div><!-- #content -->
+
+<div class="clear clearfix"></div>
+    <section id="footer-widget-area" class="">
+      <div class="container">
+        <div class="row">
+          <div id="footer-widget-area">
+            <div class="four columns">
+
+                
+                <?php if ( ! dynamic_sidebar( 'first_footer' ) ) : ?>
+
+                <?php endif; ?>
+
+              <!-- #first .widget-area -->
+
+
+            </div>
+            <div class="four columns">
+
+                
+                <?php if ( ! dynamic_sidebar( 'second_footer' ) ) : ?>
+
+                <?php endif; ?>
+
+              <!-- #second .widget-area -->
+
+
+            </div>
+            <div class="four columns">
+
+                
+                <?php if ( ! dynamic_sidebar( 'third_footer' ) ) : ?>
+
+                <?php endif; ?>
+
+              <!-- #third .widget-area -->
+
+            </div>
+
+          </div><!-- #footer-widget-area -->
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+  <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+      <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'growthspark' ), 'growthspark', '<a href="https://growthhit.com/" rel="designer">GrowthHit</a>' ); ?>
+    </div><!-- .site-info -->
+  </footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+
+<?php } ?>
+
+<?php wp_footer(); ?>
 </body>
 </html>

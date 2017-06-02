@@ -1,10 +1,10 @@
 /*
-Theme Name: GrowthSpark
+Theme Name: GSpark
 Theme URI: https://spark.growthhit.com/
 Author: GrowthHit
 Author URI: https://growthhit.com
 Description: A fast mobile Responsive WordPress theme built for speed and optimized for conversions with calls to action or CTA.
-Version: 2.0.5
+Version: 2.0.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: growthspark
@@ -1865,6 +1865,10 @@ a.close:hover {
 #animatedModal input {
     border-color: #fff;
     color: #fff
+}
+#animatedModal input[type="text"], #animatedModal input[type="name"], #animatedModal input[type="email"] {
+    border-color: #fff;
+    color: #000
 }
 
 @media screen and (max-width:768px) {

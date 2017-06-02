@@ -171,17 +171,16 @@ function growthspark_scripts() {
 	// LIVE mode
 	// wp_enqueue_style( 'growthspark-style', get_stylesheet_uri() );
 
-	
+	wp_enqueue_script('jquery');
+
 	wp_enqueue_script( 'growthspark-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'growthspark-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/inc/animate.min.css', array(), '20170502', false );
 
-	wp_enqueue_script( 'animated-modal', get_template_directory_uri() . '/inc/animatedModal/animatedModal.min.js', array(), '20170502', true );
-
-	wp_enqueue_script('jquery');
-
+	// wp_enqueue_script( 'animated-modal', get_template_directory_uri() . '/inc/animatedModal/animatedModal.min.js', array(), '20170502', true );
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -249,7 +248,11 @@ function growthspark_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+		array(
+			'name'      => 'Titan Framework (All the cool Growth stuff needs this plugin to work. Please install it.)',
+			'slug'      => 'titan-framework',
+			'required'  => false,
+		),
 		array(
 			'name'      => 'Page Builder Sandwich (Free Page builder with premium Features)',
 			'slug'      => 'page-builder-sandwich',
@@ -287,11 +290,7 @@ function growthspark_register_required_plugins() {
 			'required'  => false,
 		),
 		
-		array(
-			'name'      => 'Titan Framework (Required for theme options)',
-			'slug'      => 'titan-framework',
-			'required'  => true,
-		),
+
 
 
 	);

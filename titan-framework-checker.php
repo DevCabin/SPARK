@@ -133,7 +133,7 @@ if ( ! class_exists( 'TitanFrameworkChecker' ) ) {
 			        array(
 			            'name' => 'Titan Framework',
 			            'slug' => self::PLUGIN_SLUG,
-			            'required' => true,
+			            'required' => false,
 			        ),
 			    ) );
 			}
